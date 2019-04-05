@@ -1,0 +1,287 @@
+body {
+  font-family: "Lato", sans-serif;
+  min-width: 600px;
+}
+.section {
+  width: 80%;
+  margin: 0 auto;
+}
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+}
+
+/* Часть 1: Главная страница*/
+.background-1 {
+  background: url(images/bg1.png) no-repeat center top / cover;
+  color: white;
+}
+.section.one {
+  padding-bottom: 25%;
+}
+/* Навигация */
+.section.one .navigation {
+  display: flex;
+  justify-content: space-between;
+}
+.section.one .navigation-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.section.one .navigation-main * {
+  margin-right: 35px;
+}
+/* Основной блок: заголовок и кнопка-ссылка */
+.section.one .main-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.section.one .main-block-header {
+  text-align: center;
+  padding-top: 18.5%;
+}
+.section.one .main-block-header span {
+  display: block;
+  font-size: 3.5em;
+  letter-spacing: 10px;
+}
+.section.one .main-block-header small {
+  font-size: 1.2em;
+  letter-spacing: 3px;
+  color: #ebe0dd;
+  font-style: italic;
+  font-family: serif;
+}
+.section.one .main-block .button {
+  border: 3px solid white;
+  box-sizing: border-box;
+  padding: 1.2em;
+  margin-bottom: 1em;
+  font-size: 1.1em;
+  letter-spacing: 1px;
+  width: 320px;
+  text-align: center;
+}
+.section.one .text a {
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+/* Часть 2:элементы в ряд */
+.section.two {
+  padding: 8% 0;
+}
+/* Выравнивание элементов */
+.section.two .items {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+  font-size: 1.2em;
+  word-spacing: 3px;
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+.section.two .item .text {
+  margin: 0 auto;
+  color: #888888;
+}
+/* Красное подчеркивание сниз */
+.section.two .item h2::after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid red;
+  width: 25%;
+  margin: 5px auto;
+}
+
+/* Часть 3:картинка и текст */
+.background-3 {
+  background-image: url(images/bg2.png);
+}
+.section.three {
+  display: flex;
+  padding: 10% 0;
+}
+/* Ширина для левой колонки с картинкой и выравнивание absolute */
+.section.three .image-block {
+  width: 55%;
+}
+.section.three .image-block .figure {
+  position: absolute;
+  right: 60%;
+  z-index: 1;
+}
+/* Ширина для парвой колонки с текстом и стилизация */
+.section.three .main-block {
+  color: #888888;
+  width: 45%;
+  padding-top: 4%;
+  font-size: 1.1em;
+  font-weight: 300;
+  word-spacing: 3px;
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+.section.three .main-block header {
+  color: black;
+}
+/* Красное подчеркивание снизу для заголовка */
+.section.three .main-block header::after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid red;
+  width: 20%;
+}
+.section.three .main-block .text p {
+  margin-bottom: 5%;
+  font-size: 1.2em;
+}
+/* Выравнивание изображений-ссылок */
+.section.three .main-block .download {
+  display: flex;
+}
+.section.three .main-block .download figcaption {
+  margin-right: 2%;
+}
+
+/* Часть 4:Изображение и цитата */
+.background-4 {
+  background: url(images/bg3.png) no-repeat center center / cover;
+  color: #a49ea4;
+  position: relative;
+  z-index: 2;
+}
+.section.four {
+  padding: 5% 0;
+}
+.section.four .main-block {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.section.four .dots img {
+  padding-bottom: 2%;
+}
+.section.four .quote {
+  margin: 0 17.5%;
+  text-align: center;
+  font-family: "Hairline", sans-serif;
+  font-size: 2em;
+  word-spacing: 3px;
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+.quote blockquote {
+  font-size: 0.7em;
+  font-style: italic;
+}
+
+/* Часть 5:Еда и футер*/
+.section.five {
+  padding-top: 5%;
+  width: 100%; /*Ширина секции 100% вместо 80% по умолчанию*/
+}
+/* Шапка */
+.header-foods {
+  margin-bottom: 3%;
+  text-align: center;
+  font-size: 1.2em;
+  word-spacing: 3px;
+  letter-spacing: 1px;
+}
+.header-foods h2::after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid red;
+  margin: 15px auto;
+  width: 7%;
+}
+/* Выравнивание блоков-изображений в 2 ряда через wrap и ширину */
+.main-foods {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.main-foods .foods {
+  flex-basis: 20%;
+  position: relative;
+}
+.main-foods .foods img {
+  display: block;
+  width: 100%;
+}
+/* Надписи по центру через absolute */
+.main-foods .foods .name {
+  position: absolute;
+  text-align: center;
+  font-size: 1.3em;
+  word-spacing: 3px;
+  letter-spacing: 2px;
+  line-height: 1.2;
+  color: white;
+  height: 80%;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.section.five .main-foods .foods .name small {
+  font-size: 0.4em;
+  font-family: "Times New Roman";
+  font-style: italic;
+}
+/* Статистика */
+.section.five .statistic {
+  margin: 0 auto;
+  width: 80%;
+  padding-top: 3.5%;
+  margin-bottom: 3.5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.section.five .statistic .stat {
+  flex-basis: 20%;
+  font-size: 1.8em;
+  word-spacing: 3px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+.section.five .statistic .stat small {
+  color: #6b6b6b;
+  font-weight: lighter;
+  font-size: 0.4em;
+  word-spacing: 3px;
+  letter-spacing: 2px;
+}
+/* Футер */
+.section.five footer {
+  background: url(images/bg4.png) no-repeat center center / cover;
+  border-top: 3px solid #e2e2e2;
+}
+.section.five .footer {
+  color: #c5c5c5;
+  padding: 3% 0;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+  font-size: 1.3em;
+  word-spacing: 3px;
+  letter-spacing: 3px;
+  font-weight: 300;
+}
+.section.five .designer span:not(a) {
+  font-weight: normal;
+  letter-spacing: 6px;
+  color: #6b6b6b;
+}
+.section.five .designer a {
+  color: black;
+  font-weight: normal;
+}
